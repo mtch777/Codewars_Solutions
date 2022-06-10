@@ -13,3 +13,4 @@ function digital_root(n) {
     }
     return(returnNum)
   }
+  
