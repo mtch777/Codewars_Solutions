@@ -1,0 +1,6 @@
+function domainName(url){
+  url = url.replace(/http[s]?\:\/\//,"")
+  url = url.replace('www.',"")
+  url = url.replace(/\..*/,"")
+  return url
+}
