@@ -1,0 +1,19 @@
+function fib(fibArray){
+  fibArray.push(fibArray[fibArray.length-2]+fibArray[fibArray.length-1])
+}
+              
+function productFib(prod){
+  let returnArray = []
+  let fibArray = [0,1]
+  while(fibArray[fibArray.length-2]*fibArray[fibArray.length-1]<prod){
+    fib(fibArray)
+    if(fibArray[fibArray.length-2]*fibArray[fibArray.length-1]==prod){
+      returnArray = fibArray.slice(fibArray.length-2,fibArray.length)
+      returnArray.push(true)
+      return(returnArray)
+    }
+  }
+  returnArray = fibArray.slice(fibArray.length-2,fibArray.length)
+  returnArray.push(false)
+  return(returnArray) 
+}
